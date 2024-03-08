@@ -5,7 +5,7 @@
 //		■	Show — отображает название устройства;
 //		■	Desc — отображает описание устройства.
 
-
+using static System.Console;
 class Device
 {
     protected string name;
@@ -17,17 +17,17 @@ class Device
 
     public virtual void Sound()
     {
-        Console.WriteLine("Звук устройства");
+        WriteLine("Звук устройства");
     }
 
     public void Show()
     {
-        Console.WriteLine("Название устройства: " + name);
+        WriteLine("Название устройства: " + name);
     }
 
     public virtual void Desc()
     {
-        Console.WriteLine("Описание устройства");
+        WriteLine("Описание устройства");
     }
 }
 
@@ -39,12 +39,12 @@ class Kettle : Device
 
     public override void Sound()
     {
-        Console.WriteLine("Шум кипящей воды");
+        WriteLine("Шум кипящей воды");
     }
 
     public override void Desc()
     {
-        Console.WriteLine("Чайник - устройство для кипячения воды");
+        WriteLine("Чайник - устройство для кипячения воды");
     }
 }
 
@@ -56,12 +56,12 @@ class Microwave : Device
 
     public override void Sound()
     {
-        Console.WriteLine("Жужжание микроволновки");
+        WriteLine("Жужжание микроволновки");
     }
 
     public override void Desc()
     {
-        Console.WriteLine("Микроволновка - устройство для разогрева пищи");
+        WriteLine("Микроволновка - устройство для разогрева пищи");
     }
 }
 
@@ -73,12 +73,12 @@ class Car : Device
 
     public override void Sound()
     {
-        Console.WriteLine("Звук двигателя");
+        WriteLine("Звук двигателя");
     }
 
     public override void Desc()
     {
-        Console.WriteLine("Автомобиль - транспортное средство");
+        WriteLine("Автомобиль - транспортное средство");
     }
 }
 
@@ -90,12 +90,12 @@ class Steamboat : Device
 
     public override void Sound()
     {
-        Console.WriteLine("Гудок парохода");
+        WriteLine("Гудок парохода");
     }
 
     public override void Desc()
     {
-        Console.WriteLine("Пароход - судно, двигаемое паровой машиной");
+        WriteLine("Пароход - судно, двигаемое паровой машиной");
     }
 }
 
@@ -112,19 +112,19 @@ class Program
         kettle.Sound();
         kettle.Desc();
 
-        Console.WriteLine();
+        WriteLine();
 
         microwave.Show();
         microwave.Sound();
         microwave.Desc();
 
-        Console.WriteLine();
+        WriteLine();
 
         car.Show();
         car.Sound();
         car.Desc();
 
-        Console.WriteLine();
+        WriteLine();
 
         steamboat.Show();
         steamboat.Sound();
